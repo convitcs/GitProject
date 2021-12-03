@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="inp" placeholder="Nhập số năm tại đây">
+    <button id="nut" onclick="cv()"> convert</button>
+    <script>
+        function cv(){
+            let y=document.getElementById("inp").value
+            let can=y%10
+            let chi=y%12
+            let dscan= ["Canh","Tân","Nhâm","Quý","Giáp","Ất","Bính","Đinh","Mậu","Kỷ"]     
+            let dschi= ["Thân","Dậu","Tuất","Hợi","Tý","Sửu","Dần","Mẹo","Thìn","Tỵ","Ngọ","Mùi"]
+            alert(dscan[can]+" "+dschi[chi])
+        }
+    </script>
+</body>
+</html>

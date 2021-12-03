@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<input id="a" placeholder="nhập a">
+<input id="b" placeholder="nhập b">
+<input id="c" placeholder="nhập c">
+<button onclick="run()" > Run!</button>
+<script>
+function run(){
+    
+    let a= document.getElementByid("a").value
+    let b= document.getelementbyid("b").value
+    let c= document.getelementbyid("c").value
+ 	let max=a  
+ 	if (b>max){max=b}
+ 	if (c>max){max=c}
+    doc(max)
+ 	console.log(max)}
+  </script>
+</body>
+</html>

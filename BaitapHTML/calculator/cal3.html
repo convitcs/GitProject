@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baiTap1</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            place-items: center;
+            min-block-size: 100vh;
+            display: grid;
+        }
+        .text{
+            background-color: darkslateblue;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: aliceblue;
+            padding: 10px;
+        }
+        button{
+            background-color: darkslateblue;
+            color: aliceblue;
+            font-size: 20px;
+            margin: 0px 25px 0px 25px;
+        }
+        .kq{
+            background-color: aliceblue;
+            text-align: center;
+        }
+        fieldset{
+            background-color: rgb(59, 129, 59);
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend class="text">Calculator</legend><br>
+        <input type="number" name="firstNum" id="fiNum">
+        <input type="number" name="secondNum" id="secNum"><br><br>
+        <div style="text-align: center;">
+            <button type="button" name="add" id="add" onclick="solve(this.id)">+</button>
+            <button type="button" name="sub" id="sub" onclick="solve(this.id)">-</button>
+            <button type="button" name="mul" id="mul" onclick="solve(this.id)">x</button>
+            <button type="button" name="div" id="div" onclick="solve(this.id)">/</button>
+        </div><br>
+        <div id="kq"></div><br>
+    </fieldset>
+    <script>
+        pro
+    function solve(clicked_id){
+    let num1 = document.getElementById("fiNum").value;
+    let num2 = document.getElementById("secNum").value;
+
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    // alert(clicked_id);
+    document.getElementById("kq").className = "kq";
+
+    switch (clicked_id){
+       case "add": 
+            document.getElementById("kq").innerHTML = num1 + num2;
+            break;
+        case "sub":
+            document.getElementById("kq").innerHTML = num1 - num2;
+            break;
+        case "mul":
+            document.getElementById("kq").innerHTML = num1 * num2;
+            break;
+        case "div":
+            document.getElementById("kq").innerHTML = num1 / num2;
+            break;
+    }
+    }
+//     if(clicked_id === "add" ){
+//         document.getElementById("kq").innerHTML = num1 + num2;
+//     }
+//     else if(clicked_id === "sub"){
+//         document.getElementById("kq").innerHTML = num1 - num2;
+//     }
+//     else if(clicked_id === "mul"){
+//         document.getElementById("kq").innerHTML = num1 * num2;
+//     }
+//     else{
+//         document.getElementById("kq").innerHTML = num1 / num2
+//     }
+    </script>
+</body>
+</html>

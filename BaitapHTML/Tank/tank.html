@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!-- <div style="border: 1px solid rgb(252, 0, 0); height: 190px; width: 190px; background-color: black;"> -->
-    <div style="border: 5px solid rgb(55, 0, 255);height: 200px; width: 200px;background-color: black;" >
-        <img id="tank" src="tank.png" 
-             style="position: relative; top: 0px; left: 0px;" 
-             width="19px" height="19px">
-    </div>   
-    <button onclick="len()">^</button><br> 
-    <button onclick="phai()"><-</button>
-    <button onclick="trai()">-></button><br>
-    <button onclick="xuong()">    V</button>
+  <head>
+    <title>Tank</title>
+    <style>
+      .button {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+      }
+      .up {
+        top: 0;
+        left: 1rem;
+      }
+      .down {
+        bottom: 0;
+        left: 1rem;
+      }
+      .left {
+        top: 2.5;
+        left: 0rem;
+      }
+      .right {
+        top: 2.5;
+        right: 0rem;
+      }
+    </style>
+  </head>
+  <body onload="ranboom()">
+    <div
+      style="border: 5px solid rgb(55, 0, 255);height: 190px; width: 190px;background-color: rgb(182, 170, 224);"
+    >
+      <img
+        id="tank"
+        src="tank.png"
+        style="position: relative; top: 0px; left: 0px;"
+        width="19px"
+        height="19px"
+      />
+      <img
+        id="boom"
+        src="boom.png"
+        style="position: relative"
+        width="19px;"
+        height="19px"
+      />
+    </div>
+    <button class="button up" onclick="len()">&uarr;</button><br />
+    <button class="button right" onclick="trai()">&larr;</button>
+    <button class="button left" onclick="phai()">&rarr;</button><br />
+    <button class="button down" onclick="xuong()">&darr;</button>
     <script>
-        const i="10px"
-        let d=parseInt(document.getElementById("tank").style["top"])
-        let n=parseInt(document.getElementById("tank").style["left"])
-        function trai(){ n+=19;document.getElementById("tank").style["left"]=n+"px"}
-        function phai(){ n-=19;document.getElementById("tank").style["left"]=n+"px"}
-        function len(){ d-=19;document.getElementById("tank").style["top"]=d+"px"}
-        function xuong(){ d+=19;document.getElementById("tank").style["top"]=d+"px"}
-        
+      const tank = document.getElementById("tank");
+      const boom=document.getElementById("boom");
+      function ranboom(){
+        let bt= Math.floor(Math.random()*171)
+        let bl= Math.floor(Math.random()*171)
+        boom.style.top=bt+"px"
+        boom.style.left=bl+"px"
+        console.log(boom.style.top+"_"+boom.style.left)
+      }
+      let d = parseInt(tank.style["top"]);
+      let n = parseInt(tank.style["left"]);
+      function phai() {
+        if (n+19<190){n += 19;}
+        tank.style.left = n + "px";
+        tank.style.transform = "rotate(90deg)";
+        console.log(tank.style.top+"_"+tank.style.left)
+        check();
+      }
+      function trai() {
+        if (n-19>=0){n -= 19;}
+        tank.style.left = n + "px";
+        tank.style.transform = "rotate(270deg)";
+        console.log(tank.style.top+"_"+tank.style.left)
+        check();
+      }
+      function len() {
+        if (d-19>=0){d -= 19;}
+        tank.style.top = d + "px";
+        tank.style.transform = "rotate(0deg)";
+        console.log(tank.style.top+"_"+tank.style.left)
+        check();
+      }
+      function xuong() {
+        if (d+19<190){d += 19;}
+        tank.style.top = d + "px";
+        tank.style.transform = "rotate(180deg)";
+        console.log(tank.style.top+"_"+tank.style.left)
+        check();
+      }
+      function check() {
+        let tt=parseInt(tank.style.top)
+        let tt1=tt+19
+        let tf=parseInt(tank.style.left)
+        let tf1=tf+19
+        let bt=parseInt(boom.style.top)
+        let bt1=bt+19
+        let bf=parseInt(boom.style.left)
+        let bf1=bf+19
+         if (((tt>=bt)&&(tt<=bt1)&&(tf>=bf)&&(tf<=bf1))||
+            ((tt1>=bt)&&(tt1<=bt1)&&(tf1>=bf)&&(tf1<=bf1)))
+           {alert("game over!")}
+         
+       }
+      
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form id="inp">
+        <input id="a" type="number">
+        <input id="b" type="number">
+    </form>
+    <button onclick="add()">addition(+)</button>
+    <button onclick="sub()">subtraction(-)</button>
+    <button onclick="mul()">multiplication(X)</button>
+    <button onclick="div()">divison(/)</button>
+    <br>
+    <h>Result: </h>
+    <h id="res"></h>
+    <script>
+        function addBtn(){
+            let x=parseInt(document.getElementById("a").value)
+            let y=parseInt(document.getElementById("b").value)
+            document.getElementById("res").innerHTML=x+y
+        }
+        function subBtn(){ 
+            let x=document.getElementById("a").value
+            let y=document.getElementById("b").value
+            document.getElementById("res").innerHTML=x-y
+        }
+        function multiBtn(){ 
+            let x=document.getElementById("a").value
+            let y=document.getElementById("b").value
+            document.getElementById("res").innerHTML=x*y
+        }
+        function div(){ 
+            let x=document.getElementById("a").value
+            let y=document.getElementById("b").value
+            document.getElementById("res").innerHTML=x/y
+        }
+    </script>
+</body>
+</html>

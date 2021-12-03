@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="phep" placeholder="Nhập phép tính ở đây">
+    <button onclick="cal()">Tính</button>
+    <br>
+    <h>Result:</h>
+    <h id="res"></h><br>
+    <h id="res1"></h>
+    <script>
+        function cal()
+        {
+            let s = document.getElementById("phep").value
+            // let so1=(s.split(/[+-*/]+/))
+            document.getElementById("res").innerHTML=s.split(/[+-*/]+/)
+            // let so2=(s.split(/[+-*/]+/)[1])
+            // document.getElementById("res").innerHTML=so1
+            // document.getElementById("res1").innerHTML=so2
+            // let k
+            // if (s.includes("+")){k=so1+so2}
+            // if (s.includes("-")){k=so1-so2}
+            // else if (s.includes("*")){k=so1*so2}
+            // else {k=so1/so2}
+            // document.getElementById("res").innerHTML=k
+        }
+    </script>
+</body>
+</html>
