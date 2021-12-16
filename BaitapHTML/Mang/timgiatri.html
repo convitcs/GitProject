@@ -8,11 +8,13 @@
 </head>
 <body>
     <script>
-        let a=prompt("Nhập a:")
-        let b=prompt("Nhập b:")
-        let res=(a+b<4)? 'Below':'Over'
-        alert("kết quả là: "+res)
-            
-    </Script>
+        let a=prompt("Enter a number:")
+        let x=[1,6,9,12,-9,-22]
+        let j=0
+        for(let i in x){
+            if (x[i]==a){ alert("Value "+x[i]+" found at "+i);break;++j}
+        }
+        // if (j==0)
+    </script>
 </body>
 </html>

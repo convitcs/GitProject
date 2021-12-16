@@ -7,12 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="text"></p>
     <script>
-        let a=prompt("Nhập a:")
-        let b=prompt("Nhập b:")
-        let res=(a+b<4)? 'Below':'Over'
-        alert("kết quả là: "+res)
-            
-    </Script>
+        for (let i=1; i<=5;i++){
+            document.getElementById("text").innerHTML+="The number is "+i+"<br>"
+        }
+    </script>
 </body>
 </html>

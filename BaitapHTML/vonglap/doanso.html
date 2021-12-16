@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    <dev id="body">
+    <button onclick="choi()">Chơi thôi!</button>
+    </dev>
+    <script>
+        function choi(){
+            let t=document.getElementById("body")
+            // let so1
+            let so2
+            let goal
+            let choilai
+            choilai=1
+            while (choilai==1) {
+                so2=prompt("Nhập số thứ hai:")
+                goal=Math.floor(Math.random()*so2)
+                // Math.random() * (max-min) + min;
+                let num=prompt("Vậy bạn đoán số nào:")
+                while (num!=goal){
+                num=prompt("sai rồi, đoán lại đi:")
+                }
+                choilai=prompt("Bạn đoán đúng rồi đó!!! ấn 1 nếu bạn muốn chơi lại.")
+            } 
+            alert("Tạm biệt~~")
+        }
+    </script>
+</body>
+</html>
