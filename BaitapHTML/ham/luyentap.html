@@ -38,9 +38,11 @@
             alert(t)
         }
         function bai6(a){
-            if (a%2!=NaN){return(true)}
-            return(false)
+            console.log(a%2)
+            if (isNaN(a) ){alert(false)}
+            else {alert(true)}
         }
+        bai6(15)
         function bai7(a,b,c){
             let min=a
             if (min>b){min=b}
@@ -69,6 +71,7 @@
         //bai3(2)
         //bai4(5)
         //bai5(5) 
+
     </script>
 </body>
 </html>

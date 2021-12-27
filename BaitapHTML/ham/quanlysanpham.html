@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add new product</h1>
+    <input type="text" id="add" placeholder="New product">
+    <button onclick="addp">Add</button>
+    <h2>Display all product</h2>
+    <div id="bang">
+    </div>
+    <script>
+        let product=["nokia","samsung","iphone"]
+        function display(){
+            let data="<table><tr><th colspan='2'>Product Name</th><th>"+product.length+" product(s)</th></tr>"
+            for (let i = 0; i < product.length; i++) { 
+             data+="<tr><td>"+product[i]+"<td>"
+             data+="<td><button onclick='edit(i)' >edit</button></td>"   
+             data+="<td><button onlick='del(i)'>delete</button></td>"
+            }
+            data+="</table>"
+            document.getElementById("bang").innerHTML = data
+        }
+        function edit(i){
+            product[i]=prompt("nhập dữ liệu mới:")
+        }
+        function del(i){
+
+        }
+
+        display()
+    </script>
+</body>
+</html>
