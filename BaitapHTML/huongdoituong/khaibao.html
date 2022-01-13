@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function student(id,name,address){
+            this.id = id
+            this.name = name
+            this.address = address
+            this.info = function(){
+                return "ID:"+this.id+"  Name:"+this.name+"  Address:"+this.address
+            }
+        }
+        let student1 = new student(123,"Minh","QN")
+        console.log(student1.info())
+        let student2 = {
+            id: 246,
+            name: "MinhC",
+            address: "QN",
+            inf: function(){
+                return "ID:"+this.id+"  Name:"+this.name+"  Address:"+this.address 
+            } 
+        }
+        console.log(student2.inf());
+
+        function mobile(id, name){
+            this.id = id
+            this.name  = name
+            this.message = "";
+            this.sendmessage = function(message,mobile){
+                mobile.message = message
+            } 
+        }
+        let ip = new mobile(1,"ip")
+        let ar = new mobile(2,"ar")
+        ip.sendmessage("hello ar rach", ar)
+        console.log(ar.message)
+        
+        
+    </script>
+</body>
+</html>

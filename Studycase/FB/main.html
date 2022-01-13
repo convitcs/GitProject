@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+</head>
+<body>
+    <canvas id="zone" width="900" height="500"></canvas>
+    <p id="score">score=0</p>
+    <script>
+        let birdimg= new Image
+        let BGimg= new Image
+        let topimg= new Image
+        let botimg= new Image
+
+        birdimg.src="bird.png"
+        BGimg.src="BG.png"
+        console.log(BGimg.width+"|"+BGimg.height)
+        topimg.src="top.png"
+        botimg.src="bot.png"
+
+        let canvas = document.getElementById("zone")
+        let context = canvas.getContext("2d")
+
+        let b={
+            x: 180,
+            y: 250
+        }
+        let ong=[]
+        ong[0]={
+            x:900,
+            y:0
+        }
+       
+        function run(){
+            context.drawImage(BGimg,0,0)
+            context.drawImage(birdimg,b.x,b.y)
+            
+            b.y+=2
+            requestAnimationFrame(run)
+        }
+        function jump(){b.y-=60}
+        run()
+    </script>
+</body>
+</html>
