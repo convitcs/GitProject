@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+
+#BG{
+    background-image: url("./Images/summer.jpg");
+    background-size: 1250px; 
+    background-repeat:space;
+}
+table{
+	background-color: white;
+	border: 10px solid pink;
+}
+
+#playzone
+{
+	width:600px;
+	height:500px;
+	float:right;
+	margin-left:50px;
+	margin-top:50px;
+	margin-right: 200px;
+	overflow:auto;
+}
+#control
+{
+	width:300px;
+	height:400px;
+	float:left;
+	background-color:rgb(40, 49, 131);
+	margin-left:150px;
+	margin-top:40px;
+	
+	opacity:0.95; 
+	overflow:hidden;
+	border-radius:0px;
+}
+
+
+
+.sq
+{
+	width:40px;
+	height:40px;
+	font-size:10px;
+	border-right:#000 2px solid;
+	border-top:#000 1px solid;
+	background-color:#FFF;
+	background-repeat:round;
+	overflow:hidden;
+	opacity:2; 
+	cursor:pointer;
+}
+
+.button
+{
+	width:150px;
+	height:50px;
+	margin-left:70px;
+	margin-top:30px;
+	font-weight:700;
+	font-family:"Arial Black", Gadget, sans-serif;
+	background-color:rgb(47, 133, 47);
+	border-radius:50px;
+	color:rgb(0, 0, 0);
+}
+#PVE
+{
+	background-color: rgb(70, 65, 65) ;
+}
+
+#UNDO
+{
+	width: 50px;
+	height:50px;
+	margin-left:50px;
+	margin-top:30px;
+	font-weight:700;
+	font-family:"Arial Black", Gadget, sans-serif;
+	background-color:rgb(70, 65, 65);
+	border-radius:50px;
+	color:rgb(0, 0, 0);
+}
+
+#REDO
+{
+	width: 50px;
+	height:50px;
+	margin-left:100px;
+	margin-top:30px;
+	font-weight:700;
+	font-family:"Arial Black", Gadget, sans-serif;
+	background-color:rgb(70, 65, 65);
+	border-radius:50px;
+	color:rgb(0, 0, 0);
+	
+}
+#imgCP
+{
+	width:100px;
+	height:100px;
+	margin:auto;
+	margin-top:10px;
+	background-image:url('./Images/o.png');
+	background-repeat:round;
+	background-color:rgb(40, 49, 131);
+}

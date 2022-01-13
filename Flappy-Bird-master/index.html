@@ -12,14 +12,14 @@
 </body>
 <script>
     // mình bắt đầu nhé hôm nay mic hư :)
-var canvas= document.getElementById('gamezone');
-var context= canvas.getContext('2d');
-var scoreshow=document.getElementById('score');
+let canvas= document.getElementById('gamezone');
+let context= canvas.getContext('2d');
+let scoreshow=document.getElementById('score');
 
-var birdimg= new Image();
-var hinhnenchinh=new Image();
-var ongtren= new Image();
-var ongduoi=new Image();
+let birdimg= new Image();
+let hinhnenchinh=new Image();
+let ongtren= new Image();
+let ongduoi=new Image();
 birdimg.src="bird.png";
 hinhnenchinh.src="nenchinh.png";
 console.log(hinhnenchinh.width+"|"+hinhnenchinh.height)
@@ -28,15 +28,15 @@ ongduoi.src="ongduoi.png";
 // đầu tiên là nạp các hình vô nha các bạn :)
 // bước 2 là tạo 1 số biến cần thiết
 
-var score=0;
-var khoangcachhaiong=140; // mình xin phép đặt tên tiếng việt để các bạn dễ hình dung
-var khoangcachdenongduoi; // biến này là khoảng cách từ đầu ống trên đến vị trí đầu ống dưới
+let score=0;
+let khoangcachhaiong=140; // mình xin phép đặt tên tiếng việt để các bạn dễ hình dung
+let khoangcachdenongduoi; // biến này là khoảng cách từ đầu ống trên đến vị trí đầu ống dưới
 // tạo ra 1 object chim với tọa độ x y là 1 nữa canvas
-var bird={
+let bird={
     x: hinhnenchinh.width/5,
     y: hinhnenchinh.height/2
 }
-var ong=[]; //tạo mảng ống để chứa các ống di chuỷen
+let ong=[]; //tạo mảng ống để chứa các ống di chuỷen
 ong[0]={
     x:canvas.width,
     y:0 // khởi tạo ống đầu tiên nằm bên phải ngoài cùng và y=0;
@@ -48,7 +48,7 @@ function run(){
     context.drawImage(hinhnenchinh,0,0);
     context.drawImage(birdimg,bird.x,bird.y);
 
-    for(var i=0;i<ong.length;i++){
+    for(let i=0;i<ong.length;i++){
         khoangcachdenongduoi=ongtren.height+khoangcachhaiong;
         context.drawImage(ongtren,ong[i].x,ong[i].y);
         // vẽ ống trên theo tọa độ của ống đó

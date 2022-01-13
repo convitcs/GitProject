@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CARO</title>
+    <link rel="shortcut icon" href="./Images/icon.jpg">
+    <link rel="stylesheet" href="CssFile.css">
+    <script src="main.js"></script>
+</head>
+<body onload="settup()" id="BG">
+
+
+    
+    <div id="control">
+        <div><b>Lượt của:</b></div>
+        <div id="imgCP"></div>
+
+        <!-- <div><input type="checkbox" id="timecd"><b>Thời gian:</b></div> -->
+        <div>--------------------------------------------------------</div>
+        <div id="TL"></div>
+
+        <input type="button" class="button"id="PvP" value="Play(PVP)" onClick="PVP()"/><br/>
+        <input type="button" id="PVE" class="button"id="PvE" value="PVE" /><br/>
+        
+        <input type="button" id="UNDO"class="button"id="UNDO" value="&#8592">
+        <input type="button" id="REDO"class="button"id="UNDO" value="&#8594"><br/>
+        
+    </div>
+
+    <div id="playzone"><table id="table"></table></div>
+
+</body>
+</html>
